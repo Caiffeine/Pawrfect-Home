@@ -1,0 +1,128 @@
+.pet-search-container {
+  width: 100%;
+}
+
+.search-form {
+  margin-bottom: 1rem;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: stretch; /* Changed from center to stretch */
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.search-input-group input {
+  flex: 1;
+  padding: 1rem 3rem 1rem 1.5rem;
+  border: 1px solid #e1e1e1;
+  border-right: none; /* Add this to remove right border */
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-size: 1rem;
+  height: 100%; /* Ensure consistent height */
+}
+
+.search-btn {
+  padding: 0 1.5rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  height: auto; /* Let it fill the container height */
+  align-self: stretch; /* Make sure it stretches to fill container height */
+}
+
+.search-btn:hover {
+  background-color: #e05949;
+}
+
+.clear-search {
+  position: absolute;
+  right: 70px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-search:hover {
+  color: #666;
+}
+
+.active-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+.active-search span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.active-search strong {
+  color: #333;
+}
+
+.active-search button {
+  background: none;
+  border: none;
+  color: #ff6f61;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.active-search button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .search-input-group {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  
+  .search-input-group input {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+  
+  .search-btn {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 0.8rem;
+  }
+  
+  .clear-search {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

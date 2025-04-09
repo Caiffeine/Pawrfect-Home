@@ -1,0 +1,146 @@
+.about-us {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge .years {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section-subtitle {
+  color: #ff6f61;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-text p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-features {
+  margin: 2.5rem 0;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align to the top so icon aligns with text better */
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff0ef;
+  color: #ff6f61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  text-align: center;
+  flex: 1;
+  padding-right: 50px; /* Add padding to balance the text centering with icon on left */
+}
+
+.feature-text h4 {
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.feature-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.learn-more-btn {
+  padding: 0.8rem 2rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e05949;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-badge {
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.centered-text {
+  text-align: center;
+}

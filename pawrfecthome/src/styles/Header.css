@@ -1,0 +1,281 @@
+.top-bar {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-contact {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-item .icon {
+  font-size: 0.8rem;
+  color: #ff6f61;
+}
+
+.top-bar-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.top-bar-social a {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.top-bar-social a:hover {
+  color: #ff6f61;
+}
+
+.header {
+  background-color: white;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header.scrolled {
+  padding: 2rem 0;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(44, 37, 32, 0.5);
+  animation: fadeInHeader 0.5s ease-out forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-background {
+  position: absolute;
+  bottom: -20px; /* Overlaps slightly below the header */
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-image: url('./../img/bg/header_shape.png');
+  background-repeat: repeat-x; /* Repeat horizontally */
+  background-size: calc(100% + 20px) 100%; /* Extend the width slightly to account for cropping */
+  background-position: -20px 0; /* Crop the left side and align the repeated pattern */
+  z-index: 1; /* Ensure it stays above other elements */
+  pointer-events: none; /* Prevent interaction */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.logo-icon {
+  color: #ff6f61;
+  font-size: 2rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+/* Remove the ::after pseudo-element that creates the underline */
+/* .nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6f61;
+  transition: all 0.3s ease;
+} */
+
+.nav a:hover, .nav a.active {
+  color: #ff6f61;
+}
+
+/* Remove the animation that expands the underline */
+/* .nav a:hover::after, .nav a.active::after {
+  width: 100%;
+} */
+
+.donate-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #e05949;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  position: fixed; /* Ensure it stays in the same place */
+  top: 1rem; /* Adjust for consistent placement */
+  right: 1rem; /* Align to the top-right corner */
+  z-index: 110; /* Ensure it stays above other elements */
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 90;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .top-bar {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    padding: 2rem;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav.open {
+    right: 0;
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  .mobile-menu-overlay {
+    display: block;
+  }
+  
+  .donate-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem; /* Adjust padding for better appearance */
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .nav {
+    display: flex; /* Ensure navigation is visible */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    gap: 1rem;
+  }
+  
+  .donate-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .header-background {
+    background-size: auto 100%; /* Ensure it scales properly for smaller screens */
+    background-position: center 0; /* Center the pattern for mobile view */
+  }
+}

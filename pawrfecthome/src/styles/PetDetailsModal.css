@@ -1,0 +1,369 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Increased to a very high value to ensure it's always on top */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pet-modal {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 85vh; /* Slightly reduced to ensure it fits better */
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 20px 0; /* Add some margin to prevent touching the viewport edges */
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.close-modal:hover {
+  background-color: #ff6f61;
+  color: white;
+  transform: rotate(90deg);
+}
+
+.pet-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.pet-modal-gallery {
+  position: relative;
+}
+
+.gallery-main {
+  position: relative;
+  height: 350px;
+  border-radius: 12px 0 0 0;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.gallery-nav:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav.prev {
+  left: 10px;
+}
+
+.gallery-nav.next {
+  right: 10px;
+}
+
+.pet-type-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 12px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.gallery-thumbnail {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gallery-thumbnail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-thumbnail.active::after {
+  opacity: 0;
+}
+
+.gallery-thumbnail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-thumbnail.active {
+  border: 2px solid #ff6f61;
+  transform: translateY(-3px);
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet-modal-details {
+  padding: 2rem 2rem 2rem 0;
+}
+
+.pet-modal-header {
+  margin-bottom: 1.5rem;
+}
+
+.pet-modal-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0 0 0.8rem;
+}
+
+.pet-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pet-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pet-gender {
+  background-color: #f0f0f0;
+  color: #ff6f61;
+}
+
+.pet-location-modal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.pet-location-modal svg {
+  color: #ff6f61;
+}
+
+.pet-modal-info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-group label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.info-group span {
+  font-weight: 600;
+  color: #333;
+}
+
+.pet-modal-description {
+  margin-bottom: 1.5rem;
+}
+
+.pet-modal-description h3,
+.pet-modal-features h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pet-modal-description p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+.feature-icon.active {
+  background-color: #e6f7ed;
+  color: #28a745;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pet-modal-features {
+  margin-bottom: 2rem;
+}
+
+.pet-modal-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.adopt-btn {
+  flex: 1;
+  padding: 1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #e05949;
+}
+
+.favorite-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff0ef;
+  color: #ff6f61;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .pet-modal-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .pet-modal-details {
+    padding: 0 2rem 2rem;
+  }
+  
+  .gallery-main {
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .pet-modal {
+    max-height: 85vh;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-thumbnails {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pet-modal-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

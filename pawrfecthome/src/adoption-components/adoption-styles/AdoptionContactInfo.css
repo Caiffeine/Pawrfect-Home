@@ -1,0 +1,94 @@
+.adoption-contact-info {
+  padding: 5rem 0;
+}
+
+/* Replace contact-container with cta-container */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Remove all the contact card related styles */
+/* .contact-info, .contact-card, .contact-icon, .contact-details, etc. */
+
+.cta-card {
+  background-color: #fff0ef;
+  border-radius: 10px;
+  padding: 2.5rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.paw-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.cta-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background-color: #e05949;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #ff6f61;
+  border: 2px solid #ff6f61;
+}
+
+.cta-button.secondary:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+}

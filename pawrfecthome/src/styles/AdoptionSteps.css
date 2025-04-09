@@ -1,0 +1,166 @@
+.adoption-steps {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-subtitle {
+  color: #ff6f61;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ff6f61;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.section-header p {
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.steps-container:before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #ddd, #ddd 5px, transparent 5px, transparent 15px);
+  z-index: -1;
+}
+
+.step-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #ff6f61;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #fff0ef;
+  color: #ff6f61;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-icon {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.step-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.steps-bottom {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #fff0ef;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.steps-bottom p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.start-adoption-btn {
+  padding: 0.8rem 2rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-adoption-btn:hover {
+  background-color: #e05949;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .steps-container:before {
+    display: none;
+  }
+}

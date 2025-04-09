@@ -1,0 +1,150 @@
+.available-pets-page {
+  min-height: 100vh;
+}
+
+.available-pets-hero {
+  height: 300px;
+  background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.available-pets-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.available-pets-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.available-pets-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.available-pets-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.available-pets-content {
+  padding: 3rem 0;
+}
+
+.pets-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pets-main-content {
+  width: 100%;
+}
+
+.pets-results-info {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.pets-results-info span {
+  font-weight: 600;
+  color: #333;
+}
+
+.no-pets-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.no-pets-found img {
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+}
+
+.no-pets-found h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.no-pets-found p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.reset-filters-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-filters-btn:hover {
+  background-color: #e05949;
+}
+
+@media (max-width: 991px) {
+  .pets-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-sidebar {
+    order: 2;
+  }
+  
+  .pets-main-content {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .available-pets-hero {
+    height: 250px;
+  }
+
+  .available-pets-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .available-pets-hero p {
+    font-size: 1rem;
+  }
+  
+  .available-pets-content {
+    padding: 2rem 0;
+  }
+}

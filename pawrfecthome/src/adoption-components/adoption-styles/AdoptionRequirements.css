@@ -1,0 +1,158 @@
+.adoption-requirements {
+  padding: 5rem 0;
+}
+
+.requirements-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.requirements-list h3,
+.disqualifiers h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.requirements-list h3 svg,
+.disqualifiers h3 svg {
+  color: #ff6f61;
+  margin-right: 0.5rem;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.requirement-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.requirement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.requirement-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff0ef;
+  color: #ff6f61;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.requirement-card h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.requirement-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.disqualifiers {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.disqualifiers ul {
+  list-style: none;
+  padding: 0;
+}
+
+.disqualifiers li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.disqualifiers li:before {
+  content: "•";
+  color: #ff6f61;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.3rem;
+}
+
+.adoption-fees {
+  margin-top: 3rem;
+}
+
+.adoption-fees h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.fees-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fee-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fee-card h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.fee-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6f61;
+  margin-bottom: 0.8rem;
+}
+
+.fee-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.fee-card.special {
+  background-color: #fff0ef;
+  border: 2px dashed #ff6f61;
+}
+
+.fee-includes {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fee-includes p {
+  color: #666;
+}
+
+@media (max-width: 991px) {
+  .requirements-container {
+    grid-template-columns: 1fr;
+  }
+}

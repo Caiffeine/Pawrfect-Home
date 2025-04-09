@@ -1,0 +1,108 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-animation {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-animation img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.loading-content h2 {
+  font-size: 2.2rem;
+  color: #ff6f61;
+  margin-bottom: 0.8rem;
+  animation: fadeIn 1s ease;
+}
+
+.loading-content p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.5s ease;
+}
+
+.loading-bar {
+  width: 240px;
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.loading-progress {
+  height: 100%;
+  width: 0;
+  background-color: #ff6f61;
+  animation: progressBar 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .loading-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .loading-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .loading-content p {
+    font-size: 1rem;
+  }
+  
+  .loading-bar {
+    width: 200px;
+  }
+}

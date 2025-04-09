@@ -1,0 +1,37 @@
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background-color: #e05949;
+}
+
+.back-to-top-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+  }
+}

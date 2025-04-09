@@ -1,0 +1,267 @@
+.featured-pets {
+  padding: 5rem 0;
+  background: url('https://kutto.netlify.app/img/bg/adoption_shop_bg.jpg') no-repeat center center/cover;
+  background-clip: content-box; /* Ensures background is not affected by padding */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ff6f61;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pet-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid #e1e1e1;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+  color: white;
+}
+
+.pet-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pet-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.pet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pet-card-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.pet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.pet-card:hover .pet-image img {
+  transform: scale(1.08);
+}
+
+.pet-badges {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 15px;
+  padding: 0 15px;
+}
+
+.pet-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pet-type {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.pet-gender {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ff6f61;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.pet-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-location {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.pet-location svg {
+  color: #ff6f61;
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+
+.pet-info h4 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.pet-details {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.breed, .age {
+  font-size: 0.9rem;
+  color: #777;
+  position: relative;
+}
+
+.breed::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 1px;
+  background-color: #ddd;
+  right: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pet-card-footer {
+  margin-top: auto;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1rem;
+}
+
+.adopt-now-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 2px solid #ff6f61;
+  color: #ff6f61;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.adopt-now-btn .btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.adopt-now-btn:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.adopt-now-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-all-btn {
+  padding: 0.8rem 2rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #e05949;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pet-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
