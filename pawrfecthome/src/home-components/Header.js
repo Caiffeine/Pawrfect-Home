@@ -109,7 +109,7 @@ function Header() {
             <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
               <ul>
                 {[
-                  { path: "/", label: "Home" },
+                  { path: "/home", label: "Home" },
                   { path: "/about", label: "About" },
                   { path: "/available-pets", label: "Available Pets" },
                   { path: "/services", label: "Services" },
