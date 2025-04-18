@@ -114,6 +114,7 @@ function Header() {
                   { path: "/available-pets", label: "Available Pets" },
                   { path: "/services", label: "Services" },
                   { path: "/adoption-process", label: "Adoption Process" },
+                  { path: "/admin-playground", label: "Admin Playground" },
                 ].map((item, index) => (
                   <motion.li key={item.path}>
                     <motion.div

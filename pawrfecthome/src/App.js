@@ -21,7 +21,11 @@ import AvailablePetsPage from "./availablepets-components/AvailablePetsPage";
 import Services from "./services-components/Services";
 import AdoptionProcessPage from "./adoption-components/AdoptionProcessPage";
 import Login from "./login-components/Login"; // Import the Login component
+import PlaygroundPage from "./admin-playground/Playground";
+import PlaygroundSection from "./home-components/PlaygroundSection.js";
+import supabase from "./db/SupabaseClient";
 import "./App.css";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(false); // Start without loading
@@ -81,6 +85,7 @@ function App() {
         <AdoptionSteps />
         <Testimonials />
         <Newsletter />
+        <PlaygroundSection />
       </>
     );
   };
@@ -139,6 +144,14 @@ function App() {
             element={
               <MainLayout>
                 <AdoptionProcessPage />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/admin-playground"
+            element={
+              <MainLayout>
+                <PlaygroundPage />
               </MainLayout>
             }
           />
